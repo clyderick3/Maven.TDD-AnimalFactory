@@ -30,6 +30,13 @@ public class DogTest {
         Assert.assertEquals(expected, actual);
     }
     // TODO - Create tests for `setBirthDate(Date birthDate)`
+    @Test
+    public void BirthDateTest() {
+        Dog doggy = new Dog("Max",new Date(), 1 );
+        Date expected = new Date();
+        Date actual = doggy.getBirthDate();
+        Assert.assertEquals(expected, actual);
+    }
     // TODO - Create tests for `void eat(Food food)`
     // TODO - Create tests for `Integer getId()`
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
