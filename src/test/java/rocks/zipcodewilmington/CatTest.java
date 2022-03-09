@@ -24,6 +24,14 @@ public class CatTest {
         Assert.assertEquals(expected, actual); //Expected is what it supposed to be. Actual is what it's coming back as.
     }
     // TODO - Create tests for `speak`
+    @Test
+    public void SpeakTest() {
+        Cat testCat = new Cat("Mark", new Date(), 2);
+        String expected = "meow!"; //Never capture the actual if you haven't captured the expected.
+
+        String actual = testCat.speak();
+        Assert.assertEquals(expected, actual);
+    }
     // TODO - Create tests for `setBirthDate(Date birthDate)`
     // TODO - Create tests for `void eat(Food food)`
     // TODO - Create tests for `Integer getId()`
