@@ -43,6 +43,13 @@ public class CatTest {
     }
     // TODO - Create tests for `void eat(Food food)`
     // TODO - Create tests for `Integer getId()`
+    @Test
+    public void getIdTest() {
+        Cat testCat = new Cat("Muffins", new Date(), 3);
+        Integer expected = 3;
+        Integer actual = testCat.getId();
+        Assert.assertEquals(expected, actual);
+    }
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
 

@@ -39,6 +39,13 @@ public class DogTest {
     }
     // TODO - Create tests for `void eat(Food food)`
     // TODO - Create tests for `Integer getId()`
+    @Test
+    public void getIDTest(){
+        Dog doggy = new Dog("Max", new Date(), 1);
+        Integer expected = 1;
+        Integer actual = doggy.getId();
+        Assert.assertEquals(expected, actual);
+    }
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
     @Test
