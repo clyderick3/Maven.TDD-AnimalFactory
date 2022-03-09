@@ -42,6 +42,18 @@ public class CatTest {
 
     }
     // TODO - Create tests for `void eat(Food food)`
+    @Test
+    public void eatFoodTest() {
+        //Given information.
+        Cat testCat = new Cat("Tye", new Date(), 3);
+        Integer expectedNumberofMeals = 1;
+        Food food = new Food();
+        //When
+        testCat.eat(food);
+        //Then
+        Integer actual = testCat.getNumberOfMealsEaten();
+        Assert.assertEquals(expectedNumberofMeals, actual);
+    }
     // TODO - Create tests for `Integer getId()`
     @Test
     public void getIdTest() {
