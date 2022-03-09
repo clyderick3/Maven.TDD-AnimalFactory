@@ -2,6 +2,7 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
 
 import java.util.Date;
@@ -22,7 +23,11 @@ public class DogTest {
     // TODO - Create tests for `speak`
     @Test
     public void speakTest() {
-        String expected = doggy.speakTest();
+        Dog doggy = new Dog("Mark", new Date(), 2);
+        String expected = "bark!"; //Never capture the actual if you haven't captured the expected.
+
+        String actual = doggy.speak();
+        Assert.assertEquals(expected, actual);
     }
     // TODO - Create tests for `setBirthDate(Date birthDate)`
     // TODO - Create tests for `void eat(Food food)`
