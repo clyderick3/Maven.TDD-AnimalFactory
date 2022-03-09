@@ -4,12 +4,26 @@ import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Dog;
 
+import java.util.Date;
+
 /**
  * @author leon on 4/19/18.
  */
 public class DogTest {
     // TODO - Create tests for `new Dog(String name, Date birthDate, Integer id)`
+    @Test
+    public void DoggyTest() {
+        Dog doggy = new Dog("Max",new Date(), 1);
+        String expected = "Max";
+        String actual = doggy.getName();
+        Assert.assertEquals(expected, actual);
+
+    }
     // TODO - Create tests for `speak`
+    @Test
+    public void speakTest() {
+        String expected = doggy.speakTest();
+    }
     // TODO - Create tests for `setBirthDate(Date birthDate)`
     // TODO - Create tests for `void eat(Food food)`
     // TODO - Create tests for `Integer getId()`
