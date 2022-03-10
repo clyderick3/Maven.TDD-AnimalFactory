@@ -2,8 +2,10 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
+import rocks.zipcodewilmington.animals.Mammal;
 
 import java.util.Date;
 
@@ -38,6 +40,19 @@ public class DogTest {
         Assert.assertEquals(expected, actual);
     }
     // TODO - Create tests for `void eat(Food food)`
+    @Test
+    public void eatTest() {
+        //Given
+        Dog doggy = new Dog("Max",new Date(), 1 );
+        Integer expectedNumberofMeals = 1;
+        //When
+        Food food = new Food();
+        doggy.eat(food);
+        //Then
+        Integer actual = doggy.getNumberOfMealsEaten();
+        Assert.assertEquals(expectedNumberofMeals, doggy.getNumberOfMealsEaten());
+
+    }
     // TODO - Create tests for `Integer getId()`
     @Test
     public void getIDTest(){
@@ -47,8 +62,17 @@ public class DogTest {
         Assert.assertEquals(expected, actual);
     }
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
+    @Test
+    public void whatAnimalTest() {
+        Dog doggy = new Dog("Max", new Date(), 1);
+        Assert.assertTrue(doggy instanceof Animal);
+    }
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
     @Test
+    public void whatMammalTest() {
+        Dog doggy = new Dog("Max",new Date(), 1 );
+        Assert.assertTrue(doggy instanceof Mammal);
+    }
     public void setNameTest() {
         // Given (a name exists and a dog exists)
         Dog dog = new Dog(null, null, null);

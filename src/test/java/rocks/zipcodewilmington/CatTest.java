@@ -75,7 +75,7 @@ public class CatTest {
     public void whatMammalTest() {
         Cat testCat = new Cat("KitKat", new Date(), 4);
         Assert.assertTrue(testCat instanceof Mammal);
-    }        
+    }
 
 
     @Test
