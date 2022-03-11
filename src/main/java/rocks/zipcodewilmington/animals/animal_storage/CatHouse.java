@@ -12,7 +12,7 @@ public class CatHouse {
     public static void add(Cat cat) {
         catHouse.add(cat);
     }
-
+    //has no return type because it says void.
     public static void remove(Integer id) {
         catHouse.removeAnimalById(id);
     }
@@ -21,6 +21,7 @@ public class CatHouse {
         catHouse.removeAnimal(cat);
     }
 
+    //return type is Cat
     public static Cat getCatById(Integer id) {
         return catHouse.getAnimalById(id);
     }
