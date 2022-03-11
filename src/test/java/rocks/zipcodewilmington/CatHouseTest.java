@@ -29,11 +29,14 @@ public void addTest() {
     @Test
     public void removeByCatTest() {
         //Given
-        Cat cat = new Cat("Jerome",new Date(), 5);
+        CatHouse.clear();
+
+        Cat cat1 = new Cat("Jerome",new Date(), 5);
+
         Integer expected = 0;
         //When
-        CatHouse.add(cat);
-        CatHouse.remove(cat);
+        CatHouse.add(cat1);
+        CatHouse.remove(cat1);
         //Then
         Integer actual = CatHouse.getNumberOfCats();
         Assert.assertEquals(expected, actual);
@@ -41,10 +44,12 @@ public void addTest() {
     // TODO - Create tests for `void remove(Cat cat)`
     @Test
     public void removeByIDTest() {
-        Cat cat = new Cat("Jerome",new Date(), 5);
+        CatHouse.clear();
+
+        Cat cat2 = new Cat("Jerome",new Date(), 5);
         Integer expected = 0;
         //When you add the cat, you are deleting the cat by the ID.
-        CatHouse.add(cat);
+        CatHouse.add(cat2);
         CatHouse.remove(5);
         //Then
         Integer actual = CatHouse.getNumberOfCats();
@@ -53,23 +58,26 @@ public void addTest() {
     // TODO - Create tests for `Cat getCatById(Integer id)`
     @Test
     public void getCatByIDTest() {
-        Cat cat = new Cat("Jerome",new Date(), 5);
+        CatHouse.clear();
+
+        Cat cat3 = new Cat("Jerome",new Date(), 5);
         //When
-        CatHouse.add(cat);
+        CatHouse.add(cat3);
         //Then
         Cat actual = CatHouse.getCatById(5);
-        Assert.assertEquals(cat, actual);
+        Assert.assertEquals(cat3, actual);
 
     }
     // TODO - Create tests for `Integer getNumberOfCats()`
     @Test
     public void getNumberOfCatsTest() {
         //Given
-        Cat cat = new Cat("Jerome",new Date(), 5);
+        CatHouse.clear();
+        Cat cat4 = new Cat("Jerome",new Date(), 5);
         Integer expected = 2;
         //When
-        CatHouse.add(cat);
-        CatHouse.add(cat);
+        CatHouse.add(cat4);
+        CatHouse.add(cat4);
         //Then
         Assert.assertEquals(expected, CatHouse.getNumberOfCats());
         //System.out.println(CatHouse.getNumberOfCats());
